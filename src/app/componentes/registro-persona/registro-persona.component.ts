@@ -26,14 +26,18 @@ personas!:Persona[];
     if(this.persona.idPersona !=null && this.persona.nombre !=null && this.persona.tipoAyuda !=null){
       var i =0;
       var controlador=false;
+      var j=0;
       while(i < this.personas.length && controlador ===false){
         if( this.personas[i].idPersona=== this.persona.idPersona){
           controlador=true;
         }
         i++;
       }
+      while(this.ayudas[j].tipoAyuda != this.persona.tipoAyuda){
+        j++;
+      }
       if(controlador === false){
-        if(this.ayudas[i].cantidad > 0){
+        if(this.ayudas[j].cantidad>0){
         this.ayudaService.RestarExist(this.persona.tipoAyuda)
         this.personaService.post(this.persona);
         }else alert('No hay existencias de esa ayuda');
@@ -47,7 +51,7 @@ personas!:Persona[];
 
   }
   clear(){
-    this.personaService.clear();
+  this.personaService.clear();
   }
 
 }

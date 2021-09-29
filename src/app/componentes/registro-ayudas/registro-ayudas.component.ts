@@ -18,10 +18,10 @@ ayuda!: Ayuda;
     if(this.ayuda.cantidad != null && this.ayuda.idAyuda != null && this.ayuda.tipoAyuda != null){
 
     this.ayudaService.post(this.ayuda);
-  }else alert('Llene todos los campos');
+  }else {alert('Llene todos los campos');
+}}
+clear(){
+  this.ayudaService.clear();
 }
-//clear(){
- // this.ayudaService.clear();
-//}
 
 }
