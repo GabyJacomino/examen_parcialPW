@@ -1,0 +1,17 @@
+<table>
+    <thead>
+        <tr>
+            <th scope="col">Identificador de ayudas </th>
+            <th scope="col">Tipo de Ayuda </th>
+            <th scope="col">Cantidad en existencia</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ayuda of ayudas ">
+            <td>{{ ayuda.idAyuda }} </td>
+            <td>{{ ayuda.tipoAyuda}}</td>
+            <td>{{ayuda.cantidad }}</td>
+        </tr>
+
+    </tbody>
+</table>

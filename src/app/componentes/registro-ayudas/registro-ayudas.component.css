@@ -1,0 +1,17 @@
+form {
+    margin-left: 40%;
+    margin-top: 70px;
+}
+
+form div {
+    padding: 6px;
+    background-color: beige;
+    color: rgb(0, 0, 0);
+    width: 50%;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    padding-top: 5px;
+}
