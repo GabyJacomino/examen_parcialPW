@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './componentes/nav/nav.component';
 import { RegistroAyudasComponent } from './componentes/registro-ayudas/registro-ayudas.component';
 import { TAyudasComponent } from './componentes/t-ayudas/t-ayudas.component';
-import { RegistroPersonaComponent } from './registro-persona/registro-persona.component';
+import { RegistroPersonaComponent } from './componentes/registro-persona/registro-persona.component';
+import { TPersonaComponent } from './componentes/t-persona/t-persona.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RegistroPersonaComponent } from './registro-persona/registro-persona.co
     RegistroAyudasComponent,
     TAyudasComponent,
     RegistroPersonaComponent,
+    TPersonaComponent,
   ],
   imports: [
     BrowserModule,

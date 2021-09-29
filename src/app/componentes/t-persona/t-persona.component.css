@@ -1,0 +1,29 @@
+table {
+    background-color: skyblue;
+    table-layout: fixed;
+    border: 3px solid rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 80px;
+    margin-bottom: 4px;
+    width: max-content;
+    margin-left: 250px;
+}
+
+thead th {
+    width: 5%;
+}
+
+tbody {
+    font-size: 12px;
+    text-shadow: 1px 1px 1px rgb(228, 227, 233);
+    color: rgb(2, 0, 0);
+    height: 40px;
+}
+
+tbody tr:nth-child(2n-1) {
+    background-color: #c6d7e7;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: skyblue;
+}
