@@ -1,4 +1,4 @@
-import { ThrowStmt } from '@angular/compiler';
+
 import { Component, OnInit } from '@angular/core';
 import { Ayuda } from 'src/app/modelos/ayuda';
 import { Persona } from 'src/app/modelos/persona';
@@ -25,15 +25,19 @@ personas!:Persona[];
   add(){
     if(this.persona.idPersona !=null && this.persona.nombre !=null && this.persona.tipoAyuda !=null){
       var i =0;
-      var controlador=true;
-      while(i < this.personas.length && this.personas[i].nombre != this.persona.nombre){
-        i++;
-        if(i ===this.personas.length){
-          controlador=false;
+      var controlador=false;
+      while(i < this.personas.length && controlador ===false){
+        if( this.personas[i].idPersona=== this.persona.idPersona){
+          controlador=true;
         }
+        i++;
       }
       if(controlador === false){
+        if(this.ayudas[i].cantidad > 0){
+        this.ayudaService.RestarExist(this.persona.tipoAyuda)
         this.personaService.post(this.persona);
+        }else alert('No hay existencias de esa ayuda');
+
       } else{
         alert(' Ya esta persona recibio una ayuda')
       }

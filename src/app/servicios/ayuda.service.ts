@@ -21,8 +21,17 @@ export class AyudaService {
     clear(){
       localStorage.removeItem('ayudas')
     }
-    RestarExist(){
-      
+    RestarExist(tipoAyuda: string){
+      let ayudas: Ayuda[]=[];
+      if (this.get() != null){
+        ayudas= this.get();
+      }
+      var i =0;
+      while(ayudas[i].tipoAyuda!= tipoAyuda){
+        i++;
+      }
+      ayudas[i].cantidad--;
+      localStorage.setItem('ayudas',JSON.stringify(ayudas));
     }
 
 }
