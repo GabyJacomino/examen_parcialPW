@@ -18,5 +18,11 @@ export class AyudaService {
     ayudas.push(ayuda);
     localStorage.setItem('ayuda', JSON.stringify(ayudas));
     }
+    clear(){
+      localStorage.removeItem('ayudas')
+    }
+    RestarExist(){
+      
+    }
 
 }

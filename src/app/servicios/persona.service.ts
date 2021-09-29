@@ -18,4 +18,7 @@ export class PersonaService {
     personas.push(persona);
     localStorage.setItem('persona', JSON.stringify(personas));
     }
+    clear(){
+      localStorage.removeItem('ayudas')
+    }
 }
